@@ -1,0 +1,74 @@
+\documentclass[10pt]{beamer}
+
+% =========================
+% Thème Beamer
+% =========================
+\usetheme{Frankfurt}        % sobre et lisible
+\usecolortheme{default}
+
+% =========================
+% Packages utiles
+% =========================
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+\RequirePackage{tabularray}
+\RequirePackage{xcolor}
+
+% Supprimer "Table X:" dans les légendes tabularray
+\DefTblrTemplate{caption-tag}{default}{}
+\DefTblrTemplate{caption-sep}{default}{}
+\DefTblrTemplate{caption-text}{default}{}
+
+
+\newcommand{\ok}[1]{\textcolor{teal}{#1}}
+\newcommand{\nok}[1]{\textcolor{red}{#1}}
+\newcommand\mydots{\makebox[1em][c]{.\hfil.\hfil.}}
+
+% =========================
+% Infos du document
+% =========================
+\title[Cas pratiques]{Séminaire d'application PCT}
+\author{Aurélien Gabieli}
+\date{\today}
+
+% =========================
+% Footer : numéro de slide
+% =========================
+\setbeamertemplate{footline}[frame number]
+
+% =========================
+% Sommaire automatique
+% =========================
+
+% Slide plan au début
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Plan}
+  \tableofcontents
+\end{frame}
+
+% =========================
+% Plan au début de chaque section
+% =========================
+\AtBeginSection[]{
+  \begin{frame}{Plan}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% ======================
+% Examens
+% ======================
+
+\input{pct/examen2023.tex}
+% \input{pct/examen2024.tex}
+% \input{pct/examen2025.tex}
+
+\end{document}

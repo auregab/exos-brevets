@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{report}
+% -------------------------
+% Titre
+% -------------------------
+\title{\textbf{CEIPI 2026}\\
+\large Méthodologie technique\\
+Mécanique}
+\author{Aurélien GABIELI}
+\date{Paris, \today}
+
+% -------------------------
+% Page layout
+% -------------------------
+\usepackage[]{geometry}
+
+\usepackage{xcolor}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  urlcolor   = purple,
+  citecolor  = purple
+}
+
+% -------------------------
+% Encoding / fonts
+% -------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+% Sans sérif propre et lisible
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+% -------------------------
+% Typographie
+% -------------------------
+\usepackage{microtype}
+
+% -------------------------
+% MACROS GÉNÉRIQUES
+% -------------------------
+
+% EPC: articles et règles
+\newcommand{\epcart}[1]{%
+  \href{https://www.epo.org/fr/legal/epc/2020/a#1.html}{A#1}%
+}
+\newcommand{\epcrule}[1]{%
+  \href{https://www.epo.org/fr/legal/epc/2020/r#1.html}{R#1}%
+}
+
+% Jurisprudence EPO
+\newcommand{\epocase}[2]{%
+  \href{https://www.epo.org/en/boards-of-appeal/decisions/#1}{#2}%
+}
+
+% Directives EPO
+\newcommand{\epogl}[2]{%
+  \href{https://www.epo.org/en/legal/guidelines/2024/#1}{#2}%
+}
+
+\setcounter{tocdepth}{1}
+
+\usepackage{tabularray}
+% Supprimer "Table X:" dans les légendes tabularray
+\DefTblrTemplate{caption-tag}{default}{}
+\DefTblrTemplate{caption-sep}{default}{}
+\DefTblrTemplate{caption-text}{default}{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+% \input{méthodologie_technique/cas_attacheur.tex}
+% \input{méthodologie_technique/cas_chaussure.tex}
+\input{méthodologie_technique/cas_compas.tex}
+\input{méthodologie_technique/cas_connecteur.tex}
+% \input{méthodologie_technique/cas_mouchoir.tex}
+% \input{méthodologie_technique/cas_ressort.tex}
+
+\end{document}
