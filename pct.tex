@@ -22,6 +22,7 @@
 \DefTblrTemplate{caption-sep}{default}{}
 \DefTblrTemplate{caption-text}{default}{}
 
+\usepackage{wasysym}
 
 \newcommand{\ok}[1]{\textcolor{teal}{#1}}
 \newcommand{\nok}[1]{\textcolor{red}{#1}}
@@ -38,6 +39,24 @@
 % Footer : numéro de slide
 % =========================
 \setbeamertemplate{footline}[frame number]
+
+
+\usepackage{hyperref}
+
+\newcommand{\pctart}[1]{%
+  \href{https://www.wipo.int/pct/fr/texts/articles/a#1.html}{Art.~#1}%
+}
+
+\newcommand{\pctrule}[1]{%
+  \href{https://www.wipo.int/pct/fr/texts/rules/r#1.html}{Règle~#1}%
+}
+
+\hypersetup{
+  %colorlinks=true,
+  %linkcolor=white,
+  urlcolor=blue
+}
+
 
 % =========================
 % Sommaire automatique
@@ -68,7 +87,7 @@
 % ======================
 
 \input{pct/examen2023.tex}
-% \input{pct/examen2024.tex}
-% \input{pct/examen2025.tex}
+\input{pct/examen2024.tex}
+\input{pct/examen2025.tex}
 
 \end{document}
